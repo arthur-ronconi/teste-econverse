@@ -1,0 +1,25 @@
+@use "variables";
+@use "mixins";
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: variables.$white;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  :hover {
+    filter: brightness(125%);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+a {
+  :hover {
+    filter: brightness(125%);
+    transition: all 0.2s ease-in-out;
+  }
+}

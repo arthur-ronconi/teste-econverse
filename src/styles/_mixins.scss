@@ -1,0 +1,22 @@
+@mixin container() {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@mixin flexRow() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexAround() {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin flexBetween() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

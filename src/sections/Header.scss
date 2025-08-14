@@ -1,0 +1,73 @@
+@use "../styles/variables";
+@use "../styles/mixins";
+
+header {
+  .header-top {
+    border-bottom: 1px #f0f0f0 solid;
+    height: 32px;
+
+    @include mixins.flexRow;
+    @include mixins.container;
+
+    & > div {
+      color: variables.$gray_1;
+      font-weight: 500;
+      gap: 9px;
+      margin: 0 auto;
+      @include mixins.flexRow;
+      span {
+        color: variables.$purple;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .header-middle {
+    height: 72px;
+    @include mixins.container;
+    @include mixins.flexBetween;
+  }
+
+  .misc-buttons {
+    @include mixins.flexBetween;
+    height: 32px;
+    button {
+      height: 100%;
+      background-color: transparent;
+      border: none;
+    }
+  }
+
+  nav {
+    height: 40px;
+    box-shadow: 0px 8px 16px 0px rgba(57, 48, 19, 0.12);
+    border-top: 1px #f0f0f0 solid;
+    @include mixins.container;
+
+    ul {
+      @include mixins.container;
+      @include mixins.flexBetween;
+      height: 100%;
+
+      li {
+        height: 100%;
+        width: 100%;
+        @include mixins.flexRow;
+        a {
+          height: 100%;
+          text-align: center;
+          gap: 12px;
+          color: variables.$gray_1;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 12px;
+          @include mixins.flexRow;
+          &.sale {
+            color: variables.$purple;
+          }
+        }
+      }
+    }
+  }
+}

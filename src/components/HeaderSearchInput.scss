@@ -1,0 +1,33 @@
+@use "../styles/mixins";
+
+$inputColor: #f6f5f2;
+
+.search-container {
+  position: relative;
+  @include mixins.flexRow;
+  input {
+    background-color: $inputColor;
+    width: 630px;
+    height: 48px;
+    border: none;
+    border-radius: 16px;
+    font-size: 14px;
+    padding: 0 16px;
+    ::placeholder {
+      font-weight: 500;
+    }
+    font-family: "Poppins", sans-serif;
+  }
+  button {
+    height: 46px;
+    width: 46px;
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+    border: none;
+    background-color: $inputColor;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+}

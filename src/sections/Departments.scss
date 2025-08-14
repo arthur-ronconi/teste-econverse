@@ -1,0 +1,41 @@
+@use "../styles/mixins";
+@use "../styles/variables";
+
+.departments {
+  @include mixins.flexAround;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-top: 39px;
+  .department {
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #4e4e4e;
+      text-decoration: none;
+      div {
+        height: 128px;
+        width: 128px;
+        border-radius: 10px;
+        background-color: #f4f4f4;
+        box-shadow: 0px 4px 11px 0px #00000021;
+        @include mixins.flexRow;
+
+        img {
+          height: 61px;
+          width: 61px;
+        }
+      }
+      &.selected {
+        color: variables.$purple;
+        div {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
